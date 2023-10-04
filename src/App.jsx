@@ -1,3 +1,4 @@
+import { useSelector } from "react-redux";
 import { Nav } from "./components";
 import {
   CustomerReviews,
@@ -9,8 +10,10 @@ import {
   Subscribe,
   SuperQuality,
 } from "./sections";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const App = () => {
+
   return (
     <main className='relative'>
       <Nav />
@@ -38,6 +41,7 @@ const App = () => {
       <section className=' bg-black padding-x padding-t pb-8'>
         <Footer />
       </section>
+      <ToastContainer />
     </main>
   );
 };
